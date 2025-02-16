@@ -1,8 +1,123 @@
 /*Configurações gerais*/
 * {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 0;
     margin: 0;
 }
 
-/**/
+a {
+    text-decoration: none;
+    color: #000;
+}
 
+li {
+    list-style: none;
+}
+
+/*Configurações Menu*/
+#cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8374E3;
+    font-size: 16px;
+    color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 50%;
+    padding: 8px;
+    margin: 20px auto;
+    text-shadow: 1px 1px 7px #000;   
+}
+
+.logo {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+#navbar {
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Configuração dos links do menu*/
+#navbar button {
+    cursor: pointer;
+    background-color: #8374E3;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
+    text-shadow: 1px 1px 7px #000;
+    transition: all 0.3s ease-in-out;
+}
+
+#navbar button:hover {
+    transform: scale(1.1);
+}
+
+
+/*Configurações do menu de conteúdos*/
+.container-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 18%;
+    padding: 10px;
+    margin-left: 5%;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.menu-title {
+    margin: 5px;
+    width: 100%;
+    box-shadow: 1px 1px 2px #000;
+}
+
+.menu-title h3 {
+    margin-left: 5%;
+}
+
+.section-title{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.contents-list ul {
+    margin: 5px 10px;
+    padding-left: 0;
+}
+
+.contents-list li {
+    margin: 1px 0;
+}
+
+.contents-list a {
+    color: inherit; /* Mantendo a cor do texto consistente*/
+    transition: color 0.3s ease; 
+}
+
+.contents-list a:hover {
+    color: #8374E3; /* Mudando a cor ao passar o mouse*/
+}
+
+/* Configurando a seção de animação e efeitos*/
+.button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #312C2C;
+    width: 100%;
+    max-width: 500px;
+    margin: 10px 0;
+}

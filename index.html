@@ -14,38 +14,52 @@
 <body>
 
     <!-- Menu -->
-     <header>
+     <header id="cabecalho">
         <h2 class="logo">CSS</h2>
         <nav id="navbar">
-            <a href="#" class="link hover">HOVER</a> 
-            <a href="#" class="link animation">ANIMATION</a> |
+            <button type="button" class="button hover-button">HOVER</button> |
+            <button type="button" class="button animation-button">ANIMATION</button> 
         </nav>
      </header>   
 
-    <main id="main-content"> 
+     <main id="main-content"> 
         <!-- Menu lateral de links -->
-        <aside id="side-menu">
+        <aside id="side-menu" class="container-menu" aria-labelledby="side-menu-title">
             <header class="menu-title">
-                <h3>Tabela de conteudos</h3>
+                <h3>Lista de conteudos</h3>
             </header>
-            <nav id="contents-menu">
-                <p>Animações hover CSS</p>
-                <ul>
-                    <li><a href="#">Rotate effect</a></li>
-                </ul>
+            <nav id="contents-menu" class="contents-list">
+                <section>
+                    <h4 class="section-title hover-title">Hover effects CSS</h4>
+                        <ul>
+                            <li><a href="#hover-effect-1">button hover effect #1</a></li>
+                            <li><a href="#hover-effect-2">button hover effect #2</a></li>
+                            <li><a href="#hover-effect-3">button hover effect #3</a></li>
+                            <li><a href="#hover-effect-4">button hover effect #4</a></li>
+                        </ul>
+                </section>
+                <section>
+                    <h4 class="section-title animation-title">Animation effects CSS</h4>
+                        <ul>
+                            <li><a href="#animation-effect-1">button animation effect #1</a></li>
+                            <li><a href="#animation-effect-2">button animation effect #2</a></li>
+                            <li><a href="#animation-effect-3">button animation effect #3</a></li>
+                            <li><a href="#animation-effect-4">button animation effect #4</a></li>
+                        </ul>
+                </section>  
             </nav>
         </aside>
-
+        
         <!-- Primeira button box -->
-        <section class="button-box"> 
+        <section id="button-box" class="button-box hover-box"> 
             <nav class="code-buttons">
                 <ul>
                     <li><button class="code-button html-button">HMTL</button></li>
                     <li><button class="code-button css-button">CSS</button></li>
                     <li><button class="code-button result-button">RESULT</button></li>
                 </ul>
-            </nav>    
-            <button class="animated-button hover" data-animation="rotate">HOVER</button>
+            </nav>   
+            <button class="animated-button hover" data-animation="">HOVER</button>
         </section>
     </main>
 
