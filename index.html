@@ -22,9 +22,9 @@
         </nav>
      </header>   
 
-     <main id="main-content" class="main-container"> 
-        <!-- Menu lateral de links -->
-        <aside id="side-menu" class="menu-container" aria-labelledby="side-menu-title">
+    <main id="main" class="container main-contents">
+         <!-- Menu lateral de links -->
+         <aside id="side-menu" class="menu-container" aria-labelledby="side-menu-title">
             <header class="menu-title">
                 <h3>Lista de conteudos</h3>
             </header>
@@ -49,15 +49,33 @@
                 </section>  
             </nav>
         </aside>
-        
-        <!-- Primeira button box -->
-        <section id="code-box" class="code-box hover-box"> 
-            <nav class="nav-buttons">
-                <button class="code-button html-button">HMTL</button>
-                <button class="code-button css-button">CSS</button> |
-                <button class="code-button result-button">RESULT</button>
-            </nav>   
-            <button class="animated-button hover" data-animation="">HOVER</button>
+
+        <!-- Seção principal para efeitos de hover -->
+        <section id="section-hover-1" class="section-hover">
+            <h2 id="hover-effect-1" class="section-title">Hover effects CSS </h2>
+            <!-- Primeira button box -->
+            <section id="code-box" class="code-box hover-box"> 
+                <h3 class="code-title title-shadow-hover">Shadow hover effect</h2>
+                <nav class="nav-buttons">
+                    <button class="code-button html-button" aria-label="HTML">HTML</button>
+                    <button class="code-button css-button" aria-label="CSS">CSS</button> |
+                    <button class="code-button result-button" aria-label="Resultado">RESULT</button>
+                </nav>   
+
+                 <section class="code-area-html">
+                    <h3>Código HTML</h3>
+                    <pre><code>&lt;button class="animated-button shadow-hover-button"&gt;SHADOW HOVER&lt;/button&gt;</code></pre>
+                 </section>
+                 
+                 <section class="code-area-css">
+                    <h3>Código CSS</h3>
+                    <pre><code>.animated-button { /* Estilos do botão */ }</code></pre>
+                 </section>
+
+                <section class="result-area">
+                    <button class="animated-button shadow-hover-button" data-animation="shadow hover">SHADOW HOVER</button>
+                </section>
+            </section>
         </section>
     </main>
 
