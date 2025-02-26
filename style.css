@@ -144,6 +144,7 @@ li {
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     text-align: start;
     background-color: #312C2C;
@@ -196,10 +197,24 @@ li {
     text-shadow: 1px 1px 5px #000;
 }
 
+.html-code-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin: -50px 0;
+}
+
 pre {
-    background-color: #eee; /* Cor de fundo para o código */
+    background-color: #fff;
+    font-size: 13px;
     padding: 10px;
     border-radius: 3px;
+    box-shadow: 1px 1px 3px #000;
     overflow-x: auto; /* Permitir rolagem horizontal se necessário */
 }
 
