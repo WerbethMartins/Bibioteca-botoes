@@ -65,16 +65,35 @@
                 </nav>   
                     
                 <!-- Seção de código HTML -->
-                 <section class="html-code-area html-code">
+                 <section class="html-code-area html-code" >
                     <h3>Código HTML</h3>
-                    <pre> <code>&lt;button class="animated-button shadow-hover-button"&gt;
-                            SHADOW HOVER&lt;/button&gt;</code></pre>
+                    <pre><code>
+                        &lt;section class="button-area"&gt; 
+                            &lt;button class="animated-button shadow-hover-button"&gt;
+                            SHADOW HOVER&lt;/button&gt;
+                        &lt;/section&gt;
+                    </code></pre>
                  </section>
                  
                  <!-- Seção de código CSS -->
-                 <section class="css-area-code" style="display: none;">
+                 <section class="css-area-code css-code" style="display: none;">
                     <h3>Código CSS</h3>
-                    <pre><code>.animated-button { /* Estilos do botão */ }</code></pre>
+                    <pre><code>
+                        .shadow-hover-button {
+                        border: 1px solid #000;
+                        box-shadow: 0 0 0;
+                        transition: all 200ms ;
+                      }
+                    
+                    .shadow-hover-button:hover {
+                        transform: translateY(-10px);
+                        box-shadow: 0 12px 1px #141211;
+                      }
+                    
+                    .shadow-hover-button:active {
+                        transform: translateY(10px);
+                        box-shadow: 0 0 0;
+                      } </code></pre>
                  </section>
 
                 <section class="result-area">
