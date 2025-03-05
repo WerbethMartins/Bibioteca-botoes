@@ -17,7 +17,7 @@
      <header id="cabecalho">
         <h2 class="logo">CSS</h2>
         <nav id="navbar">
-            <button type="button" class="button hover-button">HOVER</button> |
+            <button type="button" id="hover-button" class="button hover-button">HOVER</button> |
             <button type="button" class="button animation-button">ANIMATION</button> 
         </nav>
      </header>   
@@ -32,7 +32,7 @@
                 <section>
                     <h4 class="section-title hover-title">Hover effects CSS</h4>
                         <ul>
-                            <li><a href="#hover-effect-1">button hover effect #1</a></li>
+                            <li><a href="#shadow-hover">Shadow hover effect</a></li>
                             <li><a href="#hover-effect-2">button hover effect #2</a></li>
                             <li><a href="#hover-effect-3">button hover effect #3</a></li>
                             <li><a href="#hover-effect-4">button hover effect #4</a></li>
@@ -55,7 +55,7 @@
             <h2 id="hover-effect-1" class="section-title">Hover effects CSS </h2>
             <!-- Primeira button box -->
             <section id="code-box" class="code-box hover-box"> 
-                <h3 class="code-title title-shadow-hover">Shadow hover effect</h3>
+                <h3 id="shadow-hover" class="code-title title-shadow-hover">Shadow hover effect</h3>
                 <nav class="nav-buttons">
                     <button class="code-button html-button" aria-label="HTML" aria-labelledby="html-button">HTML</button>
                     <button class="code-button css-button" aria-label="CSS" aria-labelledby="css-button">CSS</button> |
@@ -76,7 +76,7 @@
                  </section>
                  
                  <!-- Seção de código CSS -->
-                 <section class="css-area-code css-code" style="display: none;">
+                 <section class="css-area-code css-code">
                     <h3>Código CSS</h3>
                     <pre><code>
                         .shadow-hover-button {

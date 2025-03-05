@@ -17,6 +17,7 @@ li {
 /*Configurações Menu*/
 #cabecalho{
     display: flex;
+    opacity: 0;
     justify-content: space-between;
     align-items: center;
     background-color: #8374E3;
@@ -27,7 +28,9 @@ li {
     border-radius: 10px;
     width: 50%;
     padding: 8px;
-    margin: 20px auto;
+    margin: 50px auto;
+    transform: translateY(-80px); /* Menu inicia fora da tela */
+    transition: all 0.3s ease-in-out;
     text-shadow: 1px 1px 7px #000; 
     box-shadow: 1px 1px 3px #000;  
 }
@@ -62,6 +65,7 @@ li {
 #navbar button:hover {
     transform: scale(1.1);
 }
+
 
 
 /*Configurações do menu de conteúdos*/
@@ -130,7 +134,7 @@ li {
 
 .section-hover h2 {    
     padding: 2px;
-    margin: 15px 0;
+    margin: 30px 0;
     text-shadow: 1px 1px 5px #000;
 }
 
@@ -152,6 +156,7 @@ li {
     min-height: 380px; /*Mudar o tamamho da caixa de código quando mudar para o código CSS*/
     padding: 10px;
     margin: 0 10%;
+    transform: translateY(-20px); /* Caixa de código deslocada para cima*/
 }
 
 .nav-buttons {
@@ -199,7 +204,7 @@ li {
 
 .html-code-area {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -211,7 +216,7 @@ li {
 
 .css-area-code {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     border-radius: 3px;
@@ -230,7 +235,6 @@ pre {
 }
 
 .result-area {
-    display: none; /*Oculta a área de resultado */
     margin-top: 15px; /* Espaço acima do resultado */
 }
 
