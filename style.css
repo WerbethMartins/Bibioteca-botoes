@@ -28,7 +28,7 @@ li {
     border-radius: 10px;
     width: 50%;
     padding: 8px;
-    margin: 50px auto;
+    margin: 40px auto;
     transform: translateY(-80px); /* Menu inicia fora da tela */
     transition: all 0.3s ease-in-out;
     text-shadow: 1px 1px 7px #000; 
@@ -53,10 +53,10 @@ li {
 /* Configuração dos links do menu*/
 #navbar button {
     cursor: pointer;
-    background-color: #8374E3;
-    font-size: 16px;
-    color: #fff;
     border: none;
+    background-color: #8374E3;
+    color: #fff;
+    font-size: 16px;
     margin: 0 10px;
     text-shadow: 1px 1px 7px #000;
     transition: all 0.3s ease-in-out;
@@ -66,17 +66,9 @@ li {
     transform: scale(1.1);
 }
 
-
-
-/*Configurações do menu de conteúdos*/
-
-.main-contents{
-    display: flex;
-    align-items: center;
-    width: 100%;
- }
-
+/* Configuração do menu de navegação lateral */
 .menu-container {
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,13 +115,27 @@ li {
     color: #8374E3; /* Mudando a cor ao passar o mouse*/
 }
 
+
+/*Configuração da parte principal do código*/
+.main-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+ }
+
 /* Configurando a seção de animação e efeitos*/
+.code-invisible{ /* Classe geral para esconder o código */
+    display: none;
+}
 .section-hover {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 50%; 
+    margin-bottom: 3rem;
 }
 
 .section-hover h2 {    
@@ -150,7 +156,7 @@ li {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    text-align: start;
+    text-align: center;
     background-color: #312C2C;
     width: 60%;
     min-height: 380px; /*Mudar o tamamho da caixa de código quando mudar para o código CSS*/
@@ -202,25 +208,14 @@ li {
     text-shadow: 1px 1px 5px #000;
 }
 
-.html-code-area {
+.code-area { /*Classe usada para a caixa de código tanto pra CSS,HTML e JavaScript*/
     position: absolute;
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: start;
     border-radius: 3px;
-    max-width: 200px;
-    padding: 10px;
-    margin: 25% 0;
-}
-
-.css-area-code {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 3px;
-    width: 100%;
+    max-width: 390px;
     padding: 10px;
     margin: 25% 0;
 }
@@ -230,12 +225,14 @@ pre {
     font-size: 13px;
     padding: 10px;
     border-radius: 3px;
+    height: 250px;
     box-shadow: 1px 1px 3px #000;
-    overflow-x: auto; /* Permitir rolagem horizontal se necessário */
+    overflow-y: scroll;
 }
 
 .result-area {
-    margin-top: 15px; /* Espaço acima do resultado */
+    margin-bottom: 7rem;
+    
 }
 
 /*Configuração do primeiro botão hover*/
@@ -244,15 +241,119 @@ pre {
     border: 1px solid #000;
     box-shadow: 0 0 0;
     transition: all 200ms ;
-  }
+}
 
 .shadow-hover-button:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 1px #141211;
-  }
+}
 
 .shadow-hover-button:active {
     transform: translateY(10px);
     box-shadow: 0 0 0;
-  }  
+}  
+
+/*Configuração do segundo botão hover*/
+.hover-underline {
+    font-size: 2rem;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+}
   
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #8374E3, #ffffff);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+  
+.hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+}
+  
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+  
+/* Configuração do terceiro botão hover */
+.hover-glitch {
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: 2px solid #646cff;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+}
+
+.glitch{
+    text-shadow: 0.05em 0 0
+    rgba(255, 0, 0, 0.75)
+            -0.025em -0.05em 0 rgba(0, 0, 255, 0.75)
+            0.025em 0.05em 0 rgba(0, 255, 0, 0.75);
+}
+
+.glitch:hover {
+    animation: glitch 0.03s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-4px, 4px);
+    }
+    40% {
+        transform: translate(-4px, -4px);
+    }
+    60% {
+        transform: translate(4px, 4px);
+    }
+    80% {
+        transform: translate(4px, -4px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* Configuração do quarto botão hover */
+.hover-liquid-fill{
+    position: relative;
+    cursor: pointer;
+    background: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #646cff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.liquid {
+    background: linear-gradient(#646cff 0 0) no-repeat
+    calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+    transition: 0.3s var(--t, 0s), background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+    --p: 100%;
+    --t: 0.3s;
+    color: #fff;
+}
