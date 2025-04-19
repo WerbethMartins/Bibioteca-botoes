@@ -14,8 +14,8 @@ li {
     list-style: none;
 }
 
-/*Configurações Menu*/
-#cabecalho{
+/* Configurações do menu */
+.header-menu{
     display: flex;
     opacity: 0;
     justify-content: space-between;
@@ -67,7 +67,7 @@ li {
 }
 
 /* Configuração do menu de navegação lateral */
-.menu-container {
+.side-menu {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -115,6 +115,7 @@ li {
     color: #8374E3; /* Mudando a cor ao passar o mouse*/
 }
 
+
 /* Animação */
 
 [data-anime] {
@@ -136,7 +137,7 @@ li {
   
   [data-anime].animate {
     opacity: 1;
-    transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(-2em, 0, 0);
   }
 
 
@@ -278,7 +279,7 @@ pre {
     box-shadow: 0 0 0;
 }  
 
-/*Configuração do segundo botão hover*/
+/* Configuração do segundo botão hover */
 .hover-underline {
     position: relative;
     display: inline-block;
@@ -385,7 +386,18 @@ pre {
     color: #fff;
 }
 
-/* Animation buttons */
+/* Animation area */
+.animation-area {
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    border-radius: 3px;
+    max-width: 390px;
+    padding: 10px;
+    margin: 25% 0;
+}
 /* Configuração do primeiro botão com animação */
 .ripple-button {
     position: relative;

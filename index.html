@@ -14,31 +14,31 @@
 <body>
 
     <!-- Menu -->
-     <header id="cabecalho">
+     <header id="cabecalho" class="menu-container header-menu" aria-labelledby="cabecalho">
         <h2 class="logo">CSS</h2>
         <nav id="navbar">
-            <button type="button" id="hover-button" class="button hover-button">HOVER</button> |
-            <button type="button" class="button animation-button">ANIMATION</button> 
+            <button type="button" data-target="hover-area" id="hover-button" class="button hover-button">HOVER</button> |
+            <button type="button" data-target="animation-area" id="animation-button" class="button animation-button">ANIMATION</button> 
         </nav>
      </header>   
 
      <!-- Menu lateral de links -->
-     <aside id="side-menu" class="menu-container" aria-labelledby="side-menu-title">
+     <aside id="side-menu" class="menu-container side-menu" aria-labelledby="side-menu">
         <header class="menu-title">
             <h3>Lista de conteudos</h3>
         </header>
         <nav id="contents-menu" class="contents-list">
-            <section>
-                <h4 class="section-title hover-title">Hover effects CSS</h4>
-                    <ul>
+            <section id="hover-area" class="hover-area">
+                <h4 id="hover-title" class="section-title hover-title">Hover effects CSS</h4>
+                    <ul id="sideBar-hover" class="side-menu-list">
                         <li><a href="#shadow-hover">Shadow hover effect</a></li>
                         <li><a href="#hover-underline">Underline hover effect</a></li>
                         <li><a href="#hover-glitch">Glitch hover effect</a></li>
-                        <li><a href="#hover-liquid-fill">Liquid fill hover effect</a></li>
+                        <li><a href="#liquid-fill-hover">Liquid fill hover effect</a></li>
                     </ul>
             </section>
             <section>
-                <h4 class="section-title animation-title">Animation effects CSS</h4>
+                <h4 id="animation-title" class="section-title animation-title">Animation effects CSS</h4>
                     <ul>
                         <li><a href="#animation-ripple">Ripple animation effect</a></li>
                         <li><a href="#animation-shadowIn">Shadow In animation</a></li>
@@ -50,12 +50,14 @@
     </aside>
 
     <main id="main" class="container main-contents">
-        <section id="button-gallery" class="button-gallery" ></section>
+        <section id="button-gallery" class="button-gallery"></section>
     </main>
 
-    <!-- Javascript -->
-    <script language="javascript" src="js.js" defer></script>
+
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>  
+    
+    <!-- Javascript -->
+    <script type="module" language="javascript" src="js/modules/main.js"></script>  
 </body>
 </html>
