@@ -598,11 +598,16 @@ pre {
     border-radius: 10px;
     width: 100%;
     padding: 8px;
-    margin: 15px 10px;
+    margin: 15px 15px;
     transition: all 0.3s ease-in-out;  
     box-shadow: 1px 1px 3px #000;
     text-shadow: 1px 1px 7px #000;
+
+    & h2, p {
+        margin: 0 30px;
+    }
 }
+
 
 
 
