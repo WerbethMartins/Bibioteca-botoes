@@ -14,6 +14,23 @@ li {
     list-style: none;
 }
 
+/* Configuração do botão "Voltar ao Topo" */
+
+.back-to-top {
+    position: fixed;
+    cursor: pointer;
+    background-color: #8374E3;
+    color: #fff;
+    bottom: 20px;
+    right: 20px;
+    box-shadow: 1px 1px 3px #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+}
+
 /* Configurações do menu */
 .header-menu{
     display: flex;
@@ -93,8 +110,14 @@ li {
 }
 
 .section-title{
+    border-bottom: none;
     width: 100%;
     margin: 10px 0;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.section-title:active {
+    border-bottom: 1px solid #8374E3 !important;
 }
 
 .contents-list ul {
@@ -552,6 +575,33 @@ pre {
     background-color: var(--dark);
     transform: translateX(50px);
     box-shadow: none;
+}
+
+/* Configuração do footer*/
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8374E3;
+    font-size: 16px;
+    color: #fff;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 10px;
+    width: 100%;
+    padding: 8px;
+    margin: 15px 10px;
+    transition: all 0.3s ease-in-out;  
+    box-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 7px #000;
 }
 
 

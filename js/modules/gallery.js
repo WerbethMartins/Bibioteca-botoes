@@ -431,6 +431,10 @@ function setupVisibilityButtons() {
 // Função principal para inicializar a galeria
 export function initGallery() {
     const gallery = document.getElementById('button-gallery');
+    buttons.className = 'ripple-button'; 
+    buttons.id = 'ripple-button';
+    buttons.className = 'shadow-in-button';
+    buttons.id = 'shadow-in-button';
 
     // Cria e adiciona cada botão à galeria
     buttons.forEach(button => {

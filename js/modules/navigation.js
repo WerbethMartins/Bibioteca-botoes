@@ -22,16 +22,16 @@ export function menuAnchor(targetId) {
 }
 
 // Função para navegação do menu lateral
-export function sideMenuAnchor(targetId) {
+export function sideMenuAnchor(targetId, link) {
     const target = $(`#${targetId}`);
     if (target.length) {
         $('html, body').animate({ 
-            scrollTop: target.offset().top - 100 
-        }, 800);
+            scrollTop: target.offset().top - 200 
+        }, 1000);
         
         // Adiciona efeito visual ao botão clicado
-        $('.side-menu button').removeClass('active');
-        $(this).addClass('active');
+        $('.side-menu-link').removeClass('active');
+        $(link).addClass('active');
     }
 }
 
@@ -43,17 +43,14 @@ export function initNavigation() {
         menuAnchor(targetId);
     });
 
-    // Configuração do menu lateral
-    $('.side-menu button').click(function(){
-        const targetId = $(this).data('target');
-        sideMenuAnchor(targetId);
-    });
+    $('.side-menu-link').click(function(e){
+        e.preventDefault();
+        const targetId = $(this).attr('href').substring(1); // Remove o '#' do href
+        sideMenuAnchor(targetId, this);
 
-    // Configuração do scroll
-    $(window).scroll(function() {
-        if ($(this).scrollTop() === 0) {
-            $('#hover-title, #animation-title').css('border', 'none');
-        } else {
+        if(targetId === hoverButtonId){
+            $('#hover-title').css('border-bottom', '2px solid #646cff');
+        } else if (targetId === animationButtonId){
             $('#animation-title').css('border-bottom', '2px solid #646cff');
         }
     });
