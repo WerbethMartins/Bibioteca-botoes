@@ -233,7 +233,7 @@ const buttons = [
     }, 
     {
         title: "Pulse button",
-        html: `<section id="pulse-button class="button-area">
+        html: `<section id="pulse-button" class="button-area">
         <button class="animated-button pulse-button pulse" 
         data-animation="pulse button">PULSE BUTTON</button></section>`,
         css: `.pulse-button {

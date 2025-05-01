@@ -50,10 +50,12 @@ function setupBackToTop() {
         console.log('ScrollTop: ', scrollTop); // Log para verificar o valor do scroll
 
         if(scrollTop === 0){
-            $('#hover-title').css('border-bottom', '2px solid #646cff');
+            $('#hover-title').css('border-bottom', 'none');
             $('#animation-title').css('border-bottom', 'none');
-            $(backToTopButton).hide();
-        } else if (scrollTop >= 2070){
+        } else if (scrollTop >= 100 && scrollTop < 2070) {
+            $('#hover-title').css('border-bottom', '2px solid #646cff');
+            $('#animation-title').css('border-bottom', 'none'); 
+        } else if (scrollTop >= 2070) {
             $('#hover-title').css('border-bottom', 'none');
             $('#animation-title').css('border-bottom', '2px solid #646cff');
         } else {

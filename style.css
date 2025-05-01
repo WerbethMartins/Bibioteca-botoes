@@ -62,12 +62,12 @@ li {
     transform: scale(1.1);
 }
 
+/* Configuração dos botões do menu*/
 #navbar {
     color: #fff;
     margin-right: 10px;
 }
 
-/* Configuração dos links do menu*/
 #navbar button {
     cursor: pointer;
     border: none;
@@ -135,12 +135,10 @@ li {
 }
 
 .contents-list a:hover {
-    color: #8374E3; /* Mudando a cor ao passar o mouse*/
+    color: #8374E3;
 }
 
-
 /* Animação */
-
 [data-anime] {
     opacity: 0;
     transition: .3s;
